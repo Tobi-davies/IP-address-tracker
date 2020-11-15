@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
+  integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A=="
+  crossorigin=""/>
+  <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"
+   integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA=="
+   crossorigin=""></script>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;700&display=swap" rel="stylesheet">
+  
+  <title>Frontend Mentor | IP Address Tracker</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    .attribution { font-size: 13px; text-align: center; }
+    .attribution a { color: hsl(228, 45%, 44%); text-decoration: none; }
+  </style>
+</head>
+<body>
+
+  <div class="top-section">
+    <div class="ip-header">
+      <h1>IP Address Tracker</h1>
+    </div>
+  
+    <form action="#" class="location-form">
+      <input type="text" placeholder="Search for any IP address or domain">
+      <button type="submit"><svg xmlns="http://www.w3.org/2000/svg" width="11" height="14"><path fill="none" stroke="#FFF" stroke-width="3" d="M2 1l6 6-6 6"/></svg></button>
+    </form>
+
+    <div class="info-grid">
+      <div class="info">
+        <p class="title">IP Address</p>
+        <p class="content address"></p>
+      </div>
+      <div class="info">
+        <p class="title location-title">Location</p>
+        <p class="content location"></p>
+      </div>
+      <div class="info">
+        <p class="title">Timezone</p>
+        <p class="content timezone"></p>
+      </div>
+      <div class="ips info">
+        <p class="title">ISP</p>
+        <p class="content  isp-title"></p>
+      </div>
+    </div>
+  </div>
+
+  <div id="mapid"></div>
+
+  
+
+    <!-- UTC add offset value dynamically using the API -->
+  
+  
+  <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a href="https://github.com/Tobi-davies">Tobiloba Adebayo</a>.
+  </div>
+  <script src="/app.js"></script>
+  <script>
+    //Making map and Tiles
+    // var mymap = L.map('mapid').setView([0, 0], 2.5);
+
+    // const attribution = '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+
+    // const tileUrl = 'https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png'
+
+    // const tiles = L.tileLayer(tileUrl, { attribution})
+
+    // tiles.addTo(mymap)
+    
+    // // Adding custom icon
+    // var myIcon = L.icon({
+    //     iconUrl: './images/icon-location.svg',
+    //     iconSize: [35, 48],
+    //     iconAnchor: [17, 50],
+    // });
+
+    // const marker = L.marker([0, 0], {icon: myIcon}).addTo(mymap)
+
+    // marker.setLatLng([6.4613, 3.45867])
+    // marker.setLatLng([40.4173, 82.9071])
+    // marker.setLatLng([5.6037, 0.1870])
+
+    // L.marker([6.4613, 3.45867]).addTo(mymap)
+
+
+    // var mymap = L.map('mapid').setView([0, 0], 4.5);
+
+    // L.tileLayer('https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token=pk.eyJ1IjoidG9iaWxvYmFjb2RlcyIsImEiOiJja2d1eWN4bHYwN29iMnhxdG9oZ3Y4b3ByIn0.QSCMHiWdpQUEy0G7Lc8Oyw', {
+    // attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors, <a href="https://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, Imagery © <a href="https://www.mapbox.com/">Mapbox</a>',
+    // maxZoom: 18,
+    // id: 'mapbox/streets-v11',
+    // tileSize: 512,
+    // zoomOffset: -1,
+    // accessToken: 'your.mapbox.access.token'
+    // }).addTo(mymap);
+
+    //     var myIcon = L.icon({
+    //     iconUrl: './images/icon-location.svg',
+    //     iconSize: [35, 48],
+    //     iconAnchor: [17, 50],
+    // });
+
+    // const marker = L.marker([0, 0], {icon: myIcon}).addTo(mymap)
+
+    // marker.setLatLng([40.4173, 82.9071])
+
+  </script>
+</body>
+</html>
